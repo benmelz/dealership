@@ -1,0 +1,71 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+Metrics/AbcSize:
+  CountRepeatedAttributes: false
+
+Metrics/BlockLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+  AllowedMethods:
+    - configure
+
+    # ActiveSupport::Concern
+    - class_methods
+    - included
+    - prepended
+
+    # FactoryBot
+    - define
+    - factory
+    - trait
+
+    # Gemfile
+    - group
+
+    # Rake
+    - namespace
+    - task
+
+    # RSpec
+    - before
+    - context
+    - describe
+    - it
+
+Metrics/ClassLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+Metrics/ModuleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+RSpec/ExampleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+Style/Documentation:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
