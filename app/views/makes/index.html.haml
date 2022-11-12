@@ -1,0 +1,11 @@
+%section.container
+  .d-flex.justify-content-between.align-items-end.flex-nowrap
+    %h1.mb-0 Makes
+    = link_to new_make_path, title: 'Add', class: 'btn btn-link' do
+      %i.fa-solid.fa-plus
+  %hr
+  - if @makes.present?
+    .list-group.list-group-flush
+      = render partial: 'list_group_item', collection: @makes
+  - else
+    No makes found.

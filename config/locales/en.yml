@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  makes:
+    create:
+      success: 'Successfully created make'
+    update:
+      success: 'Successfully updated make'
+    destroy:
+      success: 'Successfully deleted make'

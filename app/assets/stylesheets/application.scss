@@ -43,6 +43,18 @@ $alert-padding-y: 0.5rem;
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities/api";
 
+.btn-link {
+  color: $body-color;
+
+  &:hover {
+    color: lighten($body-color, 25%);
+  }
+
+  &:visited {
+    color: $body-color;
+  }
+}
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/regular';

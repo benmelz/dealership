@@ -1,0 +1,11 @@
+.list-group-item
+  .lead.d-flex.justify-content-between.align-items-center.flex-nowrap
+    = list_group_item.name
+    .d-flex.gap-1
+      = link_to edit_make_path(list_group_item), title: 'Edit', class: 'btn btn-link' do
+        %i.fa-solid.fa-edit
+      = link_to make_path(list_group_item),
+                title: 'Delete',
+                class: 'btn btn-link',
+                data: { 'turbo-confirm': 'Are you sure you want to delete this make?', 'turbo-method': :delete } do
+        %i.fa-solid.fa-trash

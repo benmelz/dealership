@@ -1,0 +1,9 @@
+%section.container
+  .d-flex.justify-content-between.align-items-end.flex-nowrap
+    %h1.mb-0 New Make
+    = link_to makes_path, title: 'Cancel', class: 'btn btn-link' do
+      %i.fa-solid.fa-times
+  %hr
+  = form_with model: @make do |f|
+    = render partial: 'fields', object: f
+    = f.submit class: 'btn btn-primary'
