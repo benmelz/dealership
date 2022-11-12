@@ -25,5 +25,9 @@
                           root_path,
                           class: ['nav-link', current_page?(root_path).presence && 'active'],
                           'aria-current': current_page?(root_path) && 'page'
+      .container.mt-3
+        - flash.each do |variant, content|
+          = render layout: 'layouts/alert', locals: { variant: variant } do
+            = content
     %main
       = yield

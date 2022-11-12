@@ -1,0 +1,15 @@
+:ruby
+  options = local_assigns.clone
+  variant = options.delete :variant
+  variant = 'info' if variant.to_s == 'notice'
+  variant = 'danger' if variant.to_s == 'alert'
+  options[:class] = [options[:class],
+                     'alert',
+                     "alert-#{variant}",
+                     'alert-dismissable',
+                     'fade',
+                     'show'].flatten
+= tag.div(**options) do
+  .d-flex.justify-content-between.align-items-start.gap-3
+    %div= yield
+    = button_tag '', type: 'button', class: 'btn-close', data: { 'bs-dismiss': 'alert' }, 'aria-label': 'Close'
