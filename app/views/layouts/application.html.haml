@@ -9,4 +9,21 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application', defer: true
   %body
-    = yield
+    %header
+      %nav.navbar.navbar-expand-sm.bg-light.border-bottom
+        .container-fluid
+          %span.navbar-brand.mb-0.h1 Dealership
+          = button_tag type: 'button',
+                       class: 'navbar-toggler',
+                       data: { 'bs-target': '#navbar-content', 'bs-toggle': 'collapse' },
+                       aria: { controls: 'navbar-content', expanded: 'false', label: 'Toggle' } do
+            %span.navbar-toggler-icon
+          #navbar-content.collapse.navbar-collapse
+            %ul.navbar-nav.mb-2.mb-lg-0.me-auto
+              %li.nav-item
+                = link_to 'Home',
+                          root_path,
+                          class: ['nav-link', current_page?(root_path).presence && 'active'],
+                          'aria-current': current_page?(root_path) && 'page'
+    %main
+      = yield
