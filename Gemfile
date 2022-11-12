@@ -12,6 +12,10 @@ gem 'propshaft'
 gem 'puma'
 gem 'rails'
 
+group :development, :test do
+  gem 'factory_bot_rails'
+end
+
 group :development do
   gem 'haml-lint', require: false
   gem 'rubocop', require: false
