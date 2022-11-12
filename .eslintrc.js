@@ -12,6 +12,9 @@ module.exports = {
   ignorePatterns: [
     '/app/assets/builds'
   ],
+  parserOptions: {
+    sourceType: 'module'
+  },
   rules: {
     'comma-dangle': ['error', 'never'],
     'curly': ['error', 'multi-or-nest'],
