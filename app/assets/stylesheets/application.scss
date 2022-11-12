@@ -38,7 +38,8 @@
 @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas";
 @import "bootstrap/scss/placeholders";
-
 @import "bootstrap/scss/helpers";
-
 @import "bootstrap/scss/utilities/api";
+
+$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+@import "bootstrap-icons/font/bootstrap-icons";
